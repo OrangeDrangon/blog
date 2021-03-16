@@ -1,0 +1,182 @@
+@import "https://cdn.jsdelivr.net/npm/dejavu-sans@1.0.0/css/dejavu-sans.min.css";
+
+.hidden {
+  display: none !important;
+}
+
+.dark-mode {
+  --primary: #bb86fc;
+  --primary-variant: #3700b3;
+  --secondary: #03dac6;
+  --secondary-variant: #03dac6;
+  --backgound-color: #121212;
+  --surface: #121212;
+  --error: #cf6679;
+  --primary-text: rgba(255, 255, 255, 1);
+  --secondary-text: rgba(255, 255, 255, 0.7);
+  --disabled-text: rgba(255, 255, 255, 0.5);
+}
+
+.centered {
+  max-width: 56.5rem;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+article {
+  --article-line-height: 1.5rem;
+  line-height: var(--article-line-height);
+}
+
+@media screen and (min-width: 50rem) {
+  article {
+    padding: 0 5rem;
+  }
+}
+
+article p {
+  margin: 0;
+}
+
+article p + p {
+  margin-top: calc(var(--article-line-height) * 0.75);
+}
+
+.author {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  color: var(--secondary-text);
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.author h2,
+.author h3,
+.author h4 {
+  margin: 0;
+  font-weight: 400;
+}
+
+.author h3 {
+  margin-left: 0.25rem;
+}
+
+article h1 {
+  font-size: 2rem;
+  margin: 1rem 0;
+  line-height: 2rem;
+}
+
+article h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+article h3 {
+  font-size: 1.25rem;
+  margin: 1rem 0;
+}
+
+article h4 {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+body {
+  size: 16pt;
+  font-weight: 400;
+  font-family: "Dejavu Sans Book";
+  margin: 0;
+  padding: 0;
+  --primary: #6200ee;
+  --primary-variant: #3700b3;
+  --secondary: #03dac6;
+  --secondary-variant: #018786;
+  --backgound-color: #ffffff;
+  --surface: #ffffff;
+  --error: #b00020;
+  --primary-text: rgba(0, 0, 0, 1);
+  --secondary-text: rgba(0, 0, 0, 0.7);
+  --disabled-text: rgba(0, 0, 0, 0.5);
+  --nav-height: 3rem;
+  --link-color: #409FD2;
+  background-color: var(--backgound-color);
+  color: var(--primary-text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav, nav section {
+  display: flex;
+  flex-flow: row;
+  background-color: var(--primary);
+  width: 100%;
+  top: 0;
+  height: var(--nav-height);
+}
+
+body.dark-mode header nav section, body.dark-mode header nav {
+  background-color: #1F1B24;
+}
+
+nav section a {
+  margin: 0.25rem 0 ;
+  width: 2rem;
+  color: rgb(255, 255, 255);
+
+}
+
+nav section a img {
+  height: 100%;
+}
+
+.circle {
+  border-radius: 100%;
+}
+
+.fill {
+  flex: 1;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--primary-text);
+  opacity: 70%;
+  margin: 1rem 0;
+}
+
+button {
+  border: none;
+}
+
+#dark-toggle {
+  background-color: rgba(255, 255, 255, 0);
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
+#dark-toggle:focus {
+  outline: none;
+}
+
+footer {
+  color: var(--secondary-text);
+  padding-bottom: 50vh;
+}
+
+a {
+  color: var(--link-color);
+}
+
+a[href^="http://"], a[href^="https://"] {
+    background-image: url(/launch.svg);
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding-right: 18px;
+}
